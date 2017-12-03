@@ -1,0 +1,14 @@
+queue:
+- name: ngepul
+  mode: pull
+
+- name: kopet
+  rate: 30/s
+  mode: push
+  max_concurrent_requests: 30
+  retry_parameters:
+    task_retry_limit: 1
+    task_age_limit: 1d
+    min_backoff_seconds: 10
+    max_backoff_seconds: 200
+    max_doublings: 0

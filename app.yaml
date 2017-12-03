@@ -1,0 +1,9 @@
+# [START admin_protection]
+runtime: php55
+api_version: 1
+threadsafe: yes
+
+handlers:
+# [END admin_protection]
+- url: /.*
+  script: index.php
