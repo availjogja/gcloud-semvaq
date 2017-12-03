@@ -16,10 +16,10 @@ final class TaskController {
 
     $queue = new PushQueue('kopet');
     $e = $queue->addTasks([$task1,$task2]);
-	$res = [
-		'status' => 'success',
-		'tasks' => $e
-	];
+  	$res = [
+  		'status' => 'success',
+  		'tasks' => $e
+  	];
     $response = $response
       ->withAddedHeader('Access-Control-Allow-Methods','POST, GET, OPTIONS')
       ->withAddedHeader('Access-Control-Allow-Origin','*');
