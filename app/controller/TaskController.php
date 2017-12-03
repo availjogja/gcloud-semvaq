@@ -11,7 +11,6 @@ final class TaskController {
 
   public function create(Request $request, Response $response){
 
-
     $task1 = new PushTask('/task/run',['name' => 'run', 'action' => 'send_reminder']);
     $task2 = new PushTask('/task/run',['name' => 'run', 'action' => 'send_reminder']);
 
@@ -28,6 +27,10 @@ final class TaskController {
     $r = $response->withJson($e);
     return $r;
 
+  }
+
+  public function run(Request $request, Response $response){
+	return 'task ok';
   }
 
 }
